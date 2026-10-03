@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-03T22:01:55.762219+00:00",
+  "nodeVersion": "v22.16.0",
+  "nodeChecks": {
+    "command": "node --test",
+    "exitCode": 0,
+    "tests": 9,
+    "output": "TAP version 13\n# Subtest: same-name people remain distinct\nok 1 - same-name people remain distinct\n  ---\n  duration_ms: 7.5833\n  type: 'test'\n  ...\n# Subtest: missing, omitted and zero remain distinct\nok 2 - missing, omitted and zero remain distinct\n  ---\n  duration_ms: 1.7905\n  type: 'test'\n  ...\n# Subtest: empty sheet is an ordinary result\nok 3 - empty sheet is an ordinary result\n  ---\n  duration_ms: 0.6931\n  type: 'test'\n  ...\n# Subtest: input records and order remain unchanged\nok 4 - input records and order remain unchanged\n  ---\n  duration_ms: 1.8252\n  type: 'test'\n  ...\n# Subtest: duplicate record IDs cannot double count\nok 5 - duplicate record IDs cannot double count\n  ---\n  duration_ms: 1.1788\n  type: 'test'\n  ...\n# Subtest: negative, decimal, string and nonfinite present scores are rejected\nok 6 - negative, decimal, string and nonfinite present scores are rejected\n  ---\n  duration_ms: 0.7988\n  type: 'test'\n  ...\n# Subtest: conflicting names for one participant are rejected\nok 7 - conflicting names for one participant are rejected\n  ---\n  duration_ms: 0.8274\n  type: 'test'\n  ...\n# Subtest: overflowing total is rejected\nok 8 - overflowing total is rejected\n  ---\n  duration_ms: 0.618\n  type: 'test'\n  ...\n# Subtest: malformed rows and non-array input are rejected\nok 9 - malformed rows and non-array input are rejected\n  ---\n  duration_ms: 1.6299\n  type: 'test'\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 501.0985\n"
+  },
+  "browserChecks": {
+    "id": 9,
+    "status": "passed",
+    "checks": [
+      "No document horizontal overflow at 1200, 800, 500 and 320 CSS pixels",
+      "First Tab exposes skip link; Enter transfers focus to main",
+      "Same-name people separated; missing counts shown; invalid sheet clears stale totals; empty sheet handled"
+    ],
+    "browser": "Installed Microsoft Edge via Playwright",
+    "checkedAt": "2026-10-03T21:55:28.092324+00:00",
+    "consoleErrors": []
+  },
+  "scope": "Actual local reference verification. Learner stories are not implemented. Remote CI results are separate."
+}
