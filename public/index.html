@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Score Sheet Reconciler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+<div class="eyebrow">Fieldwork / Masterplan M009</div>
+<h1>Score Sheet Reconciler</h1>
+<p class="lede">A club organizer needs totals from several score records, including incomplete ones.</p>
+</header>
+<main id="main" tabindex="-1">
+<section class="panel">
+<h2>Reconcile a fixture sheet</h2>
+<label for="scenario">Score sheet</label>
+<select id="scenario">
+<option value="normal">Same name, different people</option>
+<option value="empty">Empty sheet</option>
+<option value="invalid">Invalid negative score</option>
+<option value="duplicate">Duplicate record ID</option>
+</select>
+<button id="reconcile">Calculate totals</button>
+<output id="result" aria-live="polite">Names are labels. Participant IDs identify people.</output>
+<div class="table-wrap">
+<table>
+<caption>Reconciled participant totals</caption>
+<thead>
+<tr>
+<th scope="col">Participant</th>
+<th scope="col">Total</th>
+<th scope="col">Recorded</th>
+<th scope="col">Missing</th>
+</tr>
+</thead>
+<tbody id="totals">
+</tbody>
+</table>
+</div>
+</section>
+<section>
+<h2>Input records</h2>
+<pre id="source">
+</pre>
+</section>
+</main>
+<footer>Fictional local learning project. No account, tracking or external service. <a href="https://github.com/elirc/masterplan-009-score-sheet-reconciler">Code and learning guide</a>
+</footer>
+<script type="module" src="app.js">
+</script>
+</body>
+</html>
