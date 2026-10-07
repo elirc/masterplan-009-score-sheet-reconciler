@@ -6,8 +6,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 01: Add an average of recorded scores
 
-**User need:** As a learner or user of Score Sheet Reconciler, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Derive average from total and recorded count without treating missing as zero-valued attempts.
 
 **Implementation plan:**
@@ -26,8 +24,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 02: Sort summaries by total
-
-**User need:** As a learner or user of Score Sheet Reconciler, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Return a new sorted summary array with a deterministic tie-breaker.
 
@@ -48,8 +44,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 03: Report incomplete participants
 
-**User need:** As a learner or user of Score Sheet Reconciler, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Add a filter or badge for summaries with missing scores.
 
 **Implementation plan:**
@@ -68,8 +62,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 04: Add a team label
-
-**User need:** As a learner or user of Score Sheet Reconciler, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Extend the fixture and decide how team identity is validated.
 
@@ -90,8 +82,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 05: Change duplicate handling deliberately
 
-**User need:** As a learner or user of Score Sheet Reconciler, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Explore ignoring exact repeated records while rejecting mismatched reuse of an ID.
 
 **Implementation plan:**
@@ -110,8 +100,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 06: Export a plain-text summary
-
-**User need:** As a learner or user of Score Sheet Reconciler, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Format the completed summaries without changing reconciliation.
 

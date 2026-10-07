@@ -6,9 +6,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 01: Add an average of recorded scores
 
-**Hint 1 — ownership:** Begin from `reconcileScores`. Derive average from total and recorded count without treating missing as zero-valued attempts.
+**Hint 1 — ownership:** Begin from the `person` summary object built in `reconcileScores`. Derive average from total and recorded count without treating missing as zero-valued attempts.
 
-**Hint 2 — reasoning:** Revisit the decision “Separate identity from presentation”. Ask yourself: Explain which identifier answers “who?” and which answers “which recorded event?”.
+**Hint 2 — reasoning:** Revisit the decision “Distinguish missing from zero”. Ask yourself: Explain why if(!row.score) would collapse two different facts.
 
 **Answer direction:** A defensible solution demonstrates this observable result: A participant with no recorded scores has an explicit no-average state. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -16,9 +16,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 02: Sort summaries by total
 
-**Hint 1 — ownership:** Begin from `reconcileScores`. Return a new sorted summary array with a deterministic tie-breaker.
+**Hint 1 — ownership:** Begin from the array returned by `reconcileScores`. Return a new sorted summary array with a deterministic tie-breaker.
 
-**Hint 2 — reasoning:** Revisit the decision “Distinguish missing from zero”. Ask yourself: Explain why if(!row.score) would collapse two different facts.
+**Hint 2 — reasoning:** Revisit the decision “Separate identity from presentation”. Ask yourself: Explain which identifier answers “who?” and which answers “which recorded event?”.
 
 **Answer direction:** A defensible solution demonstrates this observable result: The input record order remains unchanged and equal totals have a documented order. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -26,9 +26,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 03: Report incomplete participants
 
-**Hint 1 — ownership:** Begin from `reconcileScores`. Add a filter or badge for summaries with missing scores.
+**Hint 1 — ownership:** Begin from the `missing` count in each summary. Add a filter or badge for summaries with missing scores.
 
-**Hint 2 — reasoning:** Revisit the decision “Reject ambiguity instead of guessing”. Ask yourself: Choose a different policy only after writing an example that explains it.
+**Hint 2 — reasoning:** Revisit the decision “Distinguish missing from zero”. Ask yourself: Explain why if(!row.score) would collapse two different facts.
 
 **Answer direction:** A defensible solution demonstrates this observable result: A zero-only participant is not mislabeled incomplete. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -36,9 +36,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 04: Add a team label
 
-**Hint 1 — ownership:** Begin from `reconcileScores`. Extend the fixture and decide how team identity is validated.
+**Hint 1 — ownership:** Begin from the row validation at the top of the `reconcileScores` loop. Extend the fixture and decide how team identity is validated.
 
-**Hint 2 — reasoning:** Revisit the decision “Separate identity from presentation”. Ask yourself: Explain which identifier answers “who?” and which answers “which recorded event?”.
+**Hint 2 — reasoning:** Revisit the decision “Reject ambiguity instead of guessing”. Ask yourself: Choose a different policy only after writing an example that explains it.
 
 **Answer direction:** A defensible solution demonstrates this observable result: A conflicting team for one participant is handled by an explicit rule. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -46,9 +46,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 05: Change duplicate handling deliberately
 
-**Hint 1 — ownership:** Begin from `reconcileScores`. Explore ignoring exact repeated records while rejecting mismatched reuse of an ID.
+**Hint 1 — ownership:** Begin from the `recordIds` check in `reconcileScores`. Explore ignoring exact repeated records while rejecting mismatched reuse of an ID.
 
-**Hint 2 — reasoning:** Revisit the decision “Distinguish missing from zero”. Ask yourself: Explain why if(!row.score) would collapse two different facts.
+**Hint 2 — reasoning:** Revisit the decision “Reject ambiguity instead of guessing”. Ask yourself: Choose a different policy only after writing an example that explains it.
 
 **Answer direction:** A defensible solution demonstrates this observable result: Tests distinguish identical replay from conflicting data under the same ID. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -56,9 +56,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 06: Export a plain-text summary
 
-**Hint 1 — ownership:** Begin from `reconcileScores`. Format the completed summaries without changing reconciliation.
+**Hint 1 — ownership:** Begin from the table rendering in `public/app.js`. Format the completed summaries without changing reconciliation.
 
-**Hint 2 — reasoning:** Revisit the decision “Reject ambiguity instead of guessing”. Ask yourself: Choose a different policy only after writing an example that explains it.
+**Hint 2 — reasoning:** Revisit the decision “Separate identity from presentation”. Ask yourself: Explain which identifier answers “who?” and which answers “which recorded event?”.
 
 **Answer direction:** A defensible solution demonstrates this observable result: The formatter handles empty input and preserves distinct participant IDs. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
